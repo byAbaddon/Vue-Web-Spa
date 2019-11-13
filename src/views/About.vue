@@ -1,17 +1,17 @@
 <template>
 
   <div class="about">
-
-    <main-box/>
+    <h1>About page</h1>
+  
  </div>
 </template>
 
 <script>
-import MainBox from '@/components/HomePageComponents/MainBox'
+
 
 export default {
   components:{
-    MainBox
+ 
   }
 }
 </script>
