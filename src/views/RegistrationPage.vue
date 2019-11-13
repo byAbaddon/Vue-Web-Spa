@@ -1,23 +1,16 @@
 <template>
-
-  <div class="registration">  
-    <header-bar/>    
-<h1 >Welcome to registration Page</h1>
-    <validation-form/>
-    <footer-bar/>
- </div>
+  <div class="registration">
+    <h1>Welcome to registration Page</h1>
+    <validation-form />
+  </div>
 </template>
 
 <script>
-
-import ValidationForm from '@/components/RegistrationPageComponents/ValidationForm.vue'
-
+import ValidationForm from "@/components/RegistrationPageComponents/ValidationForm.vue";
 
 export default {
-  components:{
-   
-    ValidationForm,
-   
+  components: {
+    ValidationForm
   }
-}
+};
 </script>

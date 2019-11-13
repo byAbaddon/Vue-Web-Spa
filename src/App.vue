@@ -4,18 +4,17 @@
       <v-content>
         <v-layout row wrap>
           <v-flex xs12 md6 lg12>
-        
-          <header-bar/>
 
-              <main>
+            <header-bar />
+
+               <main>
                  <v-container>
-                                <router-view />
+                    <router-view />
                  </v-container>
-             </main>
+               </main>
 
-          <footer-bar/>
+            <footer-bar />
 
-           
           </v-flex>
         </v-layout>
       </v-content>
@@ -31,7 +30,7 @@ import FooterBar from "@/components/FooterBar";
 export default {
   components: {
     HeaderBar,
-    FooterBar,
+    FooterBar
   }
 };
 </script>
