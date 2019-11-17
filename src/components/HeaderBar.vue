@@ -1,21 +1,35 @@
 <template>
 
-  <v-app-bar dark>
+  <v-app-bar dark class="caption">
     <v-app-bar-nav-icon></v-app-bar-nav-icon>
     <v-toolbar-title>Title</v-toolbar-title>
 
     <v-spacer></v-spacer>
     
-    <v-btn icon  rounded router-link to="/">
-      <v-icon>mdi-dots-vertical</v-icon>
-   </v-btn>
-
-       <v-btn class=" green--text" rounded router-link to="/about">  
+    <v-tooltip left>
+      <template v-slot:activator="{ on }">
+         <v-btn icon
+                large
+                rounded
+                router-link to="/"
+                v-show = hiden
+                >
+             <v-icon color="warning" v-on="on" >mdi-home</v-icon>
+         </v-btn>
+        </template>
+      <span>Back To Home Page</span>
+     </v-tooltip>
+     
+  
+       <v-btn class=" green--text font-weight-bold caption"
+              rounded router-link to="/about"
+              v-show = !hiden
+              >  
       <span>sign in</span>
       <v-icon  color="red" right > mdi-menu </v-icon>
      </v-btn>
-
-     <v-btn class=" green--text"
+ &nbsp; 
+     <v-btn class=" green--text font-weight-bold caption"
             rounded
             router-link to="/registration"
             v-show = !hiden
