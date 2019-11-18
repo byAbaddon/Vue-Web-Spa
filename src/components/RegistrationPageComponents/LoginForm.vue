@@ -1,14 +1,13 @@
 <template>
   <div id="loginForm">
     <v-app>
-      <v-content>
-        <!--   - контейнер на съдържанието -->
-        <v-layout row wrap>
-          <!--  - обвивка -->
-          <v-flex xs12 md6 lg8>
-            <!-- - свойства на гъвкавост при обпределен екран -->
+                
 
-            <v-card width="24em" height="16em" raised>
+     <v-content  >
+        
+         
+   <v-layout row wrap  justify-end class="my-3 mx-6">
+            <v-card  raised  width="18em">
               <v-card-text>
                 <v-card-title
                   primary-title
@@ -26,19 +25,31 @@
                   ></v-text-field>
 
                   <v-btn
+                     max-width="1"
                     :disabled="!valid"
                     color="success"
                     class="mr-4 px-10"
                     @click="submit"
-                  >Submit</v-btn>
+                  >Login</v-btn>
 
-                  <v-btn color="error" class="mr-4" @click="resetRorm">Reset Form</v-btn>
+                  <v-btn 
+                   max-width="120"
+                   color="error"
+                   class="mr-4"
+                   @click="resetRorm"
+                  >Registration</v-btn>
                 </v-form>
               </v-card-text>
             </v-card>
-          </v-flex>
-        </v-layout>
-      </v-content>
+            </v-layout> 
+
+           
+     </v-content>
+
+ <!-- <v-layout row wrap  justify-end>
+     <v-btn  :elevation="selected" block color="success" class="ma-1">text</v-btn>
+  </v-layout> -->
+
     </v-app>
   </div>
 </template>

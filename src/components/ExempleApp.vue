@@ -91,11 +91,30 @@
   </v-app-bar>
 </template>
 
+       <v-slider
+          prepend-icon="mdi-pan-horizontal"
+          min="0"
+          max="28"
+          thumb-label
+        ></v-slider>
+
+        <v-hover>
+      <template v-slot="{ hover }">
+        <div
+          :class="`elevation-${hover ? 22 : 6}`"
+          class="mx-auto pa-6 transition-swing"
+        >
+          Class based elevation
+        </div>
+      </template>
+    </v-hover>
+
+
 <v-app> 
 <v-content>
 
-  <v-layout row wrap>
-    <v-flex xs12 md6 lg8 >
+  <v-layout row wrap  justify-end>
+    <v-flex xs12 md6 lg8 xl1 >
      <v-btn   block color="success" class="ma-1">text</v-btn>
     </v-flex>
 </v-layout>

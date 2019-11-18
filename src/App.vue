@@ -3,16 +3,12 @@
     <v-app>
       <v-content>
         <v-layout row wrap>
-          <v-flex xs12 md6 lg12>
+          <v-flex xs12 md8  lg12 xl12>
 
             <header-bar />
-
                <main>
-                 <v-container>
-                    <router-view />
-                 </v-container>
+                   <router-view />
                </main>
-
             <footer-bar />
 
           </v-flex>
@@ -21,7 +17,6 @@
     </v-app>
   </div>
 </template>
-
 
 <script>
 import HeaderBar from "@/components/HeaderBar";

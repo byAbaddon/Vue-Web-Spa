@@ -4,8 +4,8 @@
     
 
    <login-form/>
-<h1>About page</h1>
-    <exemple-app/>
+<!-- <h1>About page</h1> -->
+    <!-- <exemple-app/> -->
 
   
  </div>
