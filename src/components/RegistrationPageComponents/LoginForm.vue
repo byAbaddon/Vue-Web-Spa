@@ -3,16 +3,29 @@
     <v-app>
                 
 
-     <v-content  >
+     <v-content  v-show="closeForm" >   
         
          
    <v-layout row wrap  justify-end class="my-3 mx-6">
-            <v-card  raised  width="18em">
+            <v-card  raised  width="18em"   >
               <v-card-text>
                 <v-card-title
                   primary-title
                   class="text-uppercase blue--text font-weight-bold"
-                >Login Form</v-card-title>
+                  >Login
+    <!--colse chip button -->               
+              <v-layout row wrap justify-end >                                 
+                <v-chip outlined
+                        close
+                        x-small
+                        class="red--text"
+                        @click="closeLoginForm"
+                        
+                        >close</v-chip> 
+                       
+              </v-layout>
+                
+                 </v-card-title>
 
                 <v-form class="px-3" v-model="valid">
                   <v-text-field color="blue" prepend-icon="mail" label="E-mail" v-model="email"></v-text-field>
@@ -34,9 +47,9 @@
 
                   <v-btn 
                    max-width="120"
-                   color="error"
+                   color="grey"
                    class="mr-4"
-                   @click="resetRorm"
+                   @click="routeToRegistrationPage"
                   >Registration</v-btn>
                 </v-form>
               </v-card-text>
@@ -53,3 +66,28 @@
     </v-app>
   </div>
 </template>
+
+<script>
+export default {
+  data(){
+    return{
+     closeForm: true
+     
+    }
+  },methods: {
+    routeToRegistrationPage() {
+     this.$router.push('/registration')
+    },
+    closeLoginForm() {
+      this.closeForm = false
+      this.$router.push('/')
+    },
+
+
+
+  
+
+  },
+}
+</script>
+

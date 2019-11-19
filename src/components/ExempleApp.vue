@@ -176,7 +176,7 @@
 
 <v-flex xs12 md6 lg3>
  <v-chip small class='light-green'> chip</v-chip>
- <v-chip close>text</v-chip>
+ <v-chip close>close</v-chip>
  
   </v-flex>
 </v-layout>

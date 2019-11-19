@@ -50,7 +50,8 @@
 export default {
 data() {
   return {
-    hiden: false
+    hiden: false,
+   
   }
 },methods: { 
   clickBtnJoin(){

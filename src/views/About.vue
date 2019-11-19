@@ -5,7 +5,7 @@
 
    <login-form/>
 <!-- <h1>About page</h1> -->
-    <!-- <exemple-app/> -->
+    <exemple-app/>
 
   
  </div>
