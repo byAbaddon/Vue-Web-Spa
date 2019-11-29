@@ -3,8 +3,8 @@
   <div class="about">
     
 
-   <login-form/>
-<!-- <h1>About page</h1> -->
+ 
+<h1>About page</h1>
     <exemple-app/>
 
   
@@ -13,12 +13,10 @@
 
 <script>
 import ExempleApp from '../components/ExempleApp'
-import LoginForm from '../components/RegistrationPageComponents/LoginForm'
 
 export default {
   components:{
      ExempleApp,
-     LoginForm,
   }
 }
 </script>

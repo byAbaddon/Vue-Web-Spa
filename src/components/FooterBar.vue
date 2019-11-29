@@ -3,7 +3,7 @@
 
   <div id="footer">
    
-    <v-footer dark padless  absolute>
+    <v-footer dark padless absolute>
       <v-card class="flex" flat tile>
         <!-- <v-card-title class="deep-orange"> -->
         

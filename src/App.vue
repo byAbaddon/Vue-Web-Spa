@@ -3,13 +3,13 @@
     <v-app>
       <v-content>
         <v-layout row wrap>
-          <v-flex xs12 md8  lg12 xl12>
+          <v-flex xs12 md12  lg12 xl12>
 
-            <header-bar />
+          <header-bar > </header-bar> 
                <main>
                    <router-view />
-               </main>
-            <footer-bar />
+               </main> 
+           <footer-bar /> 
 
           </v-flex>
         </v-layout>
@@ -23,7 +23,7 @@ import HeaderBar from "@/components/HeaderBar";
 import FooterBar from "@/components/FooterBar";
 
 export default {
-  components: {
+   components: {
     HeaderBar,
     FooterBar
   }
@@ -34,3 +34,6 @@ export default {
 
 <style lang="scss">
 </style>
+
+
+

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <nav>
+    <nav>
     <v-app-bar dark>
     <v-toolbar-side-icon>
       
@@ -64,10 +64,10 @@
   </v-card>
 
      </nav>
-    <router-view /> -->
+    <router-view />
 
 
-<template>
+<!-- <template>
 
      <v-app-bar dark>
       
@@ -85,11 +85,8 @@
             <v-icon>mdi-dots-vertical</v-icon>
           </v-btn>
 
-
-
-
   </v-app-bar>
-</template>
+</template> -->
 
        <v-slider
           prepend-icon="mdi-pan-horizontal"
