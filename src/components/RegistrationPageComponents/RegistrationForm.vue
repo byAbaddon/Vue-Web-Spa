@@ -1,5 +1,42 @@
 <template>
-  <div id="validationForm">
+<div id="validationForm">
+
+<div>
+   <v-alert
+     v-if="$v.email.$error"
+     type="error"
+     class="mt-1"
+     dense
+     >
+      Input Email is not correct!
+    </v-alert>
+  
+ <v-alert
+     v-if="$v.password.$error"
+     type="error"
+     class="mt-1"
+     dense
+     >
+      Input Password not correct!
+  </v-alert>
+
+
+
+
+ <v-alert
+ class="mt-1"
+ text
+      dense
+      icon="check_circle"
+      type="success"
+    >
+      I'm a dense alert with the <strong>text</strong> prop and a <strong>type</strong> of success
+    </v-alert>
+
+
+</div>
+
+
     <v-card width="30em" class="mx-auto mt-12" raised>
       <v-card-text>
         <v-card-title
@@ -9,17 +46,18 @@
 <!-- v-model="valid"  -->
         <v-form class="px-3" @click.prevent="submit">
           <v-text-field
-             color="blue"
+              color='colorErrorFild' 
               prepend-icon="mail"
               label="E-mail"
-              v-model="email"
+              v-model.lazy.trim="$v.email.$model"
           ></v-text-field>
+          <!-- <span v-if="$v.email.$error" class="error" > Error </span> -->
 
           <v-text-field
             color="blue"
             prepend-icon="fas fa-lock fa-1x"
             label="Password"
-            v-model="password"
+            v-model.lazy.trim="$v.password.$model"
           ></v-text-field>
 
           <v-text-field
@@ -48,7 +86,7 @@
 
 
 <script>
-import { required,email, minLength, between } from 'vuelidate/lib/validators'
+import { required, email, minLength, maxLength, between } from 'vuelidate/lib/validators'
 
 
 
@@ -56,6 +94,7 @@ import { required,email, minLength, between } from 'vuelidate/lib/validators'
 export default {
   data() {
     return {
+      colorErrorFild:"blue",
       email: "",
       password: "",
       confirmPassword: "",
@@ -65,17 +104,16 @@ export default {
       email:{
         required,
         email,
-        between: between(3, 20)
       },
       password:{
-         required,
-        between: between(3, 20),
-       
-
+        required,
+        minLength:minLength(6),
+        maxLength:maxLength(20)
       },
        confirmPassword:{
        required,
-        between: between(3, 20)
+        minLength:minLength(6),
+        maxLength:maxLength(20)
 
        }
 
@@ -90,9 +128,15 @@ export default {
     },
   
     resetForm() {
+       console.log(this.email);
+    
+       
       this.email = ""
       this.password = ""
       this.confirmPassword = ""
+
+     
+      
     }
   }
 };
